@@ -8,10 +8,10 @@ const (
 	Wednesday
 )
 const (
-	Readable = 1 << iota
+	Readable = 1 << iota // 0001
 	//iota计数器，初始化为0 iota在const关键字出现时将被重置为0(const内部的第一行之前)，const中每新增一行常量声明将使iota计数一次(iota可理解为const语句块中的行索引)
-	Writable
-	Executable
+	Writable // 2 0010
+	Executable // 4 0100
 )
 
 func TestConstantTry(t *testing.T) {
