@@ -32,7 +32,7 @@ func TestSwitchMultiCase(t *testing.T) {
 
 func TestSwitchCaseCondition(t *testing.T) {
 	for i := 0; i < 5; i++ {
-		switch {
+		switch  {
 		case i%2 == 0:
 			t.Log("Even", i)
 		case i%2 == 1:

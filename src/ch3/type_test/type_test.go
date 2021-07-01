@@ -22,13 +22,14 @@ func TestPoint(t *testing.T) {
 	a := 1
 	aPtr := &a
 	//aPtr += 1  invalid operation: aPtr += 1 (mismatched types *int and int
-	t.Log(a, aPtr)
-	t.Logf("%T, %T", a, aPtr)
+	b := *aPtr + 1            //取指针所指向地址存储的值
+	t.Log(a, aPtr, b)         // 1 0xc0000a6198 2
+	t.Logf("%T, %T", a, aPtr) // int, *int
 }
 
-func TestString(t *testing.T){
+func TestString(t *testing.T) {
 	var s string
-	t.Log("=="+s+"==") //====
+	t.Log("==" + s + "==") //====
 	t.Log(len(s))
 	if s == "" {
 		t.Log("空")
